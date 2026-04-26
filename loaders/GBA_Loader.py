@@ -70,7 +70,7 @@ def load_file(li, neflags, format):
         return 0
 
     size = li.size()
-    idaapi.set_processor_type("arm", idaapi.SETPROC_LOADER |ida_idp.SETPROC_LOADER_NON_FATAL|ida_idp.SETPROC_LOADER)
+    idaapi.set_processor_type("ARM:ARMv4T", idaapi.SETPROC_LOADER |ida_idp.SETPROC_LOADER_NON_FATAL|ida_idp.SETPROC_LOADER)
     idaapi.set_target_assembler(1)  
     entry_form_ea,entry_to_ea = (EntryPoint,EntryPoint + size)
     try:
